@@ -1,5 +1,23 @@
-# Copyright 2021 Concord, Inc.
-# See LICENSE for more information.
+# The contents of this file are subject to the Common Public Attribution
+# License Version 1.0. (the "License"); you may not use this file except in
+# compliance with the License. You may obtain a copy of the License at
+# http://code.mastadonapp.com/LICENSE. The License is based on the Mozilla Public
+# License Version 1.1, but Sections 14 and 15 have been added to cover use of
+# software over a computer network and provide for limited attribution for the
+# Original Developer. In addition, Exhibit A has been modified to be consistent
+# with Exhibit B.
+#
+# Software distributed under the License is distributed on an "AS IS" basis,
+# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+# the specific language governing rights and limitations under the License.
+#
+# The Original Code is mastadon.
+#
+# the Original Developer is the Initial Developer. The Initial Developer of 
+# the Original Code is mastadon Inc.
+# 
+# All portions of the code written by mastadon are Copyright (c) 2022 mastadon
+# Inc. All Rights Reserved.
 import secrets
 import traceback
 
@@ -17,18 +35,18 @@ from blacksheep_prometheus import PrometheusMiddleware, metrics
 from cassandra.cqlengine.query import DoesNotExist
 from email_validator import EmailSyntaxError
 
-from ekranoplan.admin import admin_users
-from ekranoplan.channels import channels, readstates
-from ekranoplan.checks import add_guild_meta, audit, validate_user
-from ekranoplan.database import Guild, GuildInvite, Member, connect, to_dict
-from ekranoplan.errors import BadData, Conflict, Err, Forbidden, NotFound
-from ekranoplan.events import member_event
-from ekranoplan.guilds import audits, guilds, members
-from ekranoplan.messages import guild_messages
-from ekranoplan.public import public
-from ekranoplan.randoms import factory
-from ekranoplan.users import meta, users
-from ekranoplan.utils import jsonify
+from mastadon.admin import admin_users
+from mastadon.channels import channels, readstates
+from mastadon.checks import add_guild_meta, audit, validate_user
+from mastadon.database import Guild, GuildInvite, Member, connect, to_dict
+from mastadon.errors import BadData, Conflict, Err, Forbidden, NotFound
+from mastadon.events import member_event
+from mastadon.guilds import audits, guilds, members
+from mastadon.messages import guild_messages
+from mastadon.public import public
+from mastadon.randoms import factory
+from mastadon.users import meta, users
+from mastadon.utils import jsonify
 
 try:
     import uvloop  # type: ignore
@@ -50,7 +68,7 @@ async def uuid():
 
 @app.route('/favicon.ico')
 async def favicon():
-    return not_found('Favicon is not provided by Ekranoplan')
+    return not_found('Favicon is not provided by mastadon')
 
 
 @app.route('/invites/{str:invite_code}', methods=['GET'])

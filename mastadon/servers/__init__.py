@@ -1,3 +1,3 @@
 """
-Reddit-like Concord Servers.
+Reddit-like Mastadon Servers.
 """

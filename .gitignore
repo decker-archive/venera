@@ -1,0 +1,7 @@
+.env
+tests/
+__pycache__/
+ekranoplan/static/*
+test.py
+.env.prod
+!.gitkeep

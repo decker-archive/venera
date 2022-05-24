@@ -50,7 +50,7 @@ from .events import channel_event
 from .flags import GuildPermissions, UserFlags
 from .randoms import factory, get_bucket
 from .tokens import verify_token
-from .cdn
+from .cdn import upload
 
 load_dotenv()
 

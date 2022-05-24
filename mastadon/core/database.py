@@ -28,7 +28,7 @@ from cassandra.cqlengine import columns, connection, management, models, usertyp
 
 dotenv.load_dotenv()
 
-cloud = {'secure_connect_bundle': os.getcwd() + r'/mastadon/static/bundle.zip'}
+cloud = {'secure_connect_bundle': os.getcwd() + r'/mastadon/core/static/bundle.zip'}
 auth_provider = PlainTextAuthProvider(
     os.getenv('client_id'), os.getenv('client_secret')
 )

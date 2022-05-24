@@ -35,18 +35,18 @@ from blacksheep_prometheus import PrometheusMiddleware, metrics
 from cassandra.cqlengine.query import DoesNotExist
 from email_validator import EmailSyntaxError
 
-from mastadon.admin import admin_users
-from mastadon.channels import channels, readstates
-from mastadon.checks import add_guild_meta, audit, validate_user
-from mastadon.database import Guild, GuildInvite, Member, connect, to_dict
-from mastadon.errors import BadData, Conflict, Err, Forbidden, NotFound
-from mastadon.events import member_event
-from mastadon.guilds import audits, guilds, members
-from mastadon.messages import guild_messages
-from mastadon.public import public
-from mastadon.randoms import factory
-from mastadon.users import meta, users
-from mastadon.utils import jsonify
+from mastadon.core.admin import admin_users
+from mastadon.core.channels import channels, readstates
+from mastadon.core.checks import add_guild_meta, audit, validate_user
+from mastadon.core.database import Guild, GuildInvite, Member, connect, to_dict
+from mastadon.core.errors import BadData, Conflict, Err, Forbidden, NotFound
+from mastadon.core.events import member_event
+from mastadon.core.guilds import audits, guilds, members
+from mastadon.core.messages import guild_messages
+from mastadon.core.public import public
+from mastadon.core.randoms import factory
+from mastadon.core.users import meta, users
+from mastadon.core.utils import jsonify
 
 try:
     import uvloop  # type: ignore

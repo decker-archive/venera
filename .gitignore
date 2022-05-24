@@ -1,7 +1,8 @@
 .env
 tests/
 __pycache__/
-mastadon/static/*
+mastadon/static/bundle.zip
+bundles/
 test.py
 .env.prod
 !.gitkeep

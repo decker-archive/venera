@@ -47,7 +47,7 @@ manager = redis.Redis(connection_pool=pool)
 
 
 async def user_event(name: str, user_id: int, data: dict):
-    d = {'name': name, 'user_id': user_id, 'data': data}
+    d = {'name': name, 'user_id': user_id, 'data': {'d': data}}
 
     await manager.publish('gateway', orjson.dumps(d))
 
@@ -57,7 +57,7 @@ async def guild_event(name: str, guild_id: int, data: dict, user_id: int = None)
         'name': name,
         'guild_id': guild_id,
         'user_id': user_id,
-        'data': data,
+        'data': {'d': data},
     }
 
     await manager.publish('gateway', orjson.dumps(d))
@@ -74,7 +74,7 @@ async def channel_event(
         'name': name,
         'channel': channel,
         'guild_id': guild_id,
-        'data': data,
+        'data': {'d': data},
         'is_message': is_message,
     }
 
@@ -86,13 +86,13 @@ async def member_event(name: str, member_id: int, guild_id: int, data: dict):
         'name': name,
         'member_id': member_id,
         'guild_id': guild_id,
-        'data': data,
+        'data': {'d': data},
     }
 
     await manager.publish('gateway', orjson.dumps(d))
 
 
 async def presence_event(name: str, user_id: int, data: dict):
-    d = {'name': name, 'user_id': user_id, 'data': data}
+    d = {'name': name, 'user_id': user_id, 'data': {'d': data}}
 
     await manager.publish('gateway', orjson.dumps(d))

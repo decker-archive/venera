@@ -1,5 +1,5 @@
 {
-  "name": "mastadon",
+  "name": "venera",
   "private": true,
   "scripts": {
     "build": "nuxt build",

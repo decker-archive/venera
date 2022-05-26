@@ -1,3 +1,0 @@
-"""
-Reddit-like Mastadon Servers.
-"""

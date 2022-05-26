@@ -1,7 +1,7 @@
 .env
 tests/
 __pycache__/
-mastadon/core/static/bundle.zip
+venera/core/static/bundle.zip
 bundles/
 test.py
 .env.prod

@@ -1,7 +1,7 @@
 # The contents of this file are subject to the Common Public Attribution
 # License Version 1.0. (the "License"); you may not use this file except in
 # compliance with the License. You may obtain a copy of the License at
-# http://code.mastadonapp.com/LICENSE. The License is based on the Mozilla Public
+# http://code.veneralab.com/LICENSE. The License is based on the Mozilla Public
 # License Version 1.1, but Sections 14 and 15 have been added to cover use of
 # software over a computer network and provide for limited attribution for the
 # Original Developer. In addition, Exhibit A has been modified to be consistent
@@ -11,13 +11,13 @@
 # WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
 # the specific language governing rights and limitations under the License.
 #
-# The Original Code is mastadon.
+# The Original Code is venera.
 #
 # the Original Developer is the Initial Developer. The Initial Developer of 
-# the Original Code is mastadon Inc.
+# the Original Code is Venera.
 # 
-# All portions of the code written by mastadon are Copyright (c) 2022 mastadon
-# Inc. All Rights Reserved.
+# All portions of the code written by Venera are Copyright (c) 2022 Venera.
+# All Rights Reserved.
 import secrets
 import traceback
 
@@ -35,18 +35,18 @@ from blacksheep_prometheus import PrometheusMiddleware, metrics
 from cassandra.cqlengine.query import DoesNotExist
 from email_validator import EmailSyntaxError
 
-from mastadon.core.admin import admin_users
-from mastadon.core.channels import channels, readstates
-from mastadon.core.checks import add_guild_meta, audit, validate_user
-from mastadon.core.database import Guild, GuildInvite, Member, connect, to_dict
-from mastadon.core.errors import BadData, Conflict, Err, Forbidden, NotFound
-from mastadon.core.events import member_event
-from mastadon.core.guilds import audits, guilds, members
-from mastadon.core.messages import guild_messages
-from mastadon.core.public import public
-from mastadon.core.randoms import factory
-from mastadon.core.users import meta, users
-from mastadon.core.utils import jsonify
+from venera.core.admin import admin_users
+from venera.core.channels import channels, readstates
+from venera.core.checks import add_guild_meta, audit, validate_user
+from venera.core.database import Guild, GuildInvite, Member, connect, to_dict
+from venera.core.errors import BadData, Conflict, Err, Forbidden, NotFound
+from venera.core.events import member_event
+from venera.core.guilds import audits, guilds, members
+from venera.core.messages import guild_messages
+from venera.core.public import public
+from venera.core.randoms import factory
+from venera.core.users import meta, users
+from venera.core.utils import jsonify
 
 try:
     import uvloop  # type: ignore
@@ -68,7 +68,7 @@ async def uuid():
 
 @app.route('/favicon.ico')
 async def favicon():
-    return not_found('Favicon is not provided by mastadon')
+    return not_found('Favicon is not provided by Venera.')
 
 
 @app.route('/invites/{str:invite_code}', methods=['GET'])

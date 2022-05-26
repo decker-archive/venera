@@ -6,3 +6,4 @@ bundles/
 test.py
 .env.prod
 !.gitkeep
+.vercel

@@ -1,4 +1,6 @@
-# venera
+![](https://github.com/veneralab/brand/raw/master/wordmarks/venera-black.svg)
+
+# Venera
 Welcome!
 
 This is the primary code base which powers [veneralab.com](https://veneralab.com)

@@ -27,9 +27,9 @@ import redis.asyncio as redis
 dotenv.load_dotenv()
 
 pool = redis.ConnectionPool(
-    host=os.getenv('redis_uri'),
-    port=os.getenv('redis_port'),
-    password=os.getenv('redis_password'),
+    host=os.getenv('REDIS_URI'),
+    port=os.getenv('REDIS_PORT'),
+    password=os.getenv('REDIS_PASSWORD'),
     db=int(os.getenv('redis_db', 0)),
     retry_on_timeout=True,
 )

@@ -30,7 +30,7 @@ dotenv.load_dotenv()
 
 cloud = {'secure_connect_bundle': os.getcwd() + r'/venera/core/static/bundle.zip'}
 auth_provider = PlainTextAuthProvider(
-    os.getenv('client_id'), os.getenv('client_secret')
+    os.getenv('CLIENT_ID'), os.getenv('CLIENT_SECRET')
 )
 
 

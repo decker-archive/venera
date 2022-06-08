@@ -1,3 +1,6 @@
+# Archived!
+This repo is no longer being updated as it’s being replaced with r3.
+
 ![](https://github.com/veneralab/brand/raw/master/wordmarks/venera-black.svg)
 
 Welcome!
